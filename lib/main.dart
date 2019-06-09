@@ -55,6 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      //En esta sección se creo un nuevo widget que reemplaza el anterior floatButton
+      //para poder modificarlo con base en las necesidades del cliente.
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(20.0),
         child: AnotherFloatButton(
