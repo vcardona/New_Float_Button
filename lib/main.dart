@@ -4,7 +4,10 @@ import 'another_float_button.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  // Este Widget es el inicio o la raiz de nuestra app, pero es inmutable
+  //No podemos generar cambios acá como por ejemplo actualizar un texto o cambiar
+  //el valor de una variable, porque no se va a ejecutar, para eso tenemos el siguiente
+  // el StatefulWidget.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,12 +15,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
+      //Por ejemplo esto es lo que vamos a ver de mensaje en la barra superior de nuesta
+      //App.
       home: MyHomePage(title: 'New FloatButton Demo'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  //Constructor de la clase que recibe las variables en este caso title.
   MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
@@ -26,6 +32,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+//Objeto State
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
